@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package testg;
+
+import "testg/user_vo.proto";
+
+service UserServer {
+    rpc GetUserById(User) returns (User);
+    rpc GetList(Empty) returns (UserList);
+    rpc GetListStream(Empty) returns (stream User);
+    rpc SetUserStream(stream User) returns (UserList);
+    rpc Chat(stream User) returns (stream User);
+}

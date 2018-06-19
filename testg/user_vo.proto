@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package testg;
+
+message Empty{}
+
+message UserList{
+    repeated User u = 1;
+}
+
+message User{
+    string user_id = 1;
+    string user_name = 2;
+    int32 age = 3;
+    Msg msg = 4;
+}
+
+message Msg{
+    string msg = 1;
+}
